@@ -1,0 +1,61 @@
+#image-popup{
+    background-color: black;
+    color: white;
+    width: 90px;
+    position: absolute;
+    height: 200px;
+    z-index: 1;    
+}
+
+#t-div{
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 60px;    
+}
+
+#t-div div{
+    border: solid;
+    height: 58px;
+    border-color: aqua;
+    
+}
+
+#image-popup div {
+    border: solid;
+    height: 61px;
+    border-color: aqua;
+    
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+#container{
+
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: black;
+    color: white;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-image{
+    flex-direction: row;
+    display: flex;
+    padding: 20px;
+    z-index: 5;
+}
+
