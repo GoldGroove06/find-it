@@ -22,7 +22,15 @@
     
 }
 
-#image-popup div {
+.cross{
+    position: absolute;
+    border: solid;
+    width: 60px;
+    height: 60px; 
+    border-color: aqua;
+}
+
+#image-popup button {
     border: solid;
     height: 61px;
     border-color: aqua;

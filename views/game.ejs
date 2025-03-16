@@ -10,10 +10,10 @@
             <p>Timer</p>
             <div class="m-image">
 
-            
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
+                    <img src="/images/1.jpg"/>
+                    <img src="/images/2.jpg"/>
+                    <img src="/images/3.jpg"/>
+                    
                 </div>
         </div>
         <div >
@@ -21,14 +21,17 @@
             <div id="container" style="height: 100vh; width: 100vw; margin-top: 60px;">
                 <img src="/bg.jpg" style="zoom: 0.7;" id="game-image"/>
                 <div id="image-popup" class="inactive">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
+                    <button id="i-1" onclick="optionHandler(1)">1</button>
+                    <button id="i-2" onclick="optionHandler(2)">2</button>
+                    <button id="i-3" onclick="optionHandler(3)">3</button>
                 </div>
                 <div id="t-div" class="inactive">
                     <div>1</div>
                 </div>
 
+                <div class="cross inactive" id="c-1">X</div>
+                <div class="cross inactive" id="c-2">X</div>
+                <div class="cross inactive" id="c-3">X</div>
             </div>
         </div>
     </body>
