@@ -1,12 +1,28 @@
  document.addEventListener('DOMContentLoaded', function() {
     mouse_listener();
-    
+    timer = true;
+    startTimer(); 
 })
 
 
 
 let x;
 let y;
+
+let count = 0;
+let timer = false;
+let stopWatch; 
+
+function startTimer() {
+    if (!stopWatch) { 
+        stopWatch = setInterval(function () {
+            if (timer) {
+                count++;
+                document.querySelector("#timer").innerHTML = count
+            }
+        }, 1000);
+    }
+}
 
 function mouse_listener() { 
         document.querySelector("#game-image").addEventListener("click", divPlacer)
@@ -46,13 +62,23 @@ async function optionHandler(id) {
         });
     
         // Check if request was successful
-        if (!req.ok) {
-            throw new Error(`HTTP error! Status: ${req.status}`);
+        if (req.ok) {
+            const data = await req.json();  // Correctly call .json()
+            console.log(data);
+            if (data.cross === true) {
+                crossSetter(data.x,data.y,data.id)
+            }
+            if (data.redirect === true){
+                window.location.href = `/finish/${data.id}`
+            }
+            
         }
+        else{
+            console.log("wrong");
+        }
+       
     
-        const data = await req.json();  // Correctly call .json()
-        console.log(data);
-        crossSetter(data.x,data.y,data.id)
+        
     
     } catch (err) {
         console.error("Fetch error:", err);
