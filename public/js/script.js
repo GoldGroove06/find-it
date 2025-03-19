@@ -66,15 +66,17 @@ async function optionHandler(id) {
             const data = await req.json();  // Correctly call .json()
             console.log(data);
             if (data.cross === true) {
+                document.querySelector(`#i-${id}`).onclick = null
                 crossSetter(data.x,data.y,data.id)
             }
             if (data.redirect === true){
-                window.location.href = `/finish/${data.id}`
+                window.location.href = `/finish`
             }
             
         }
         else{
             console.log("wrong");
+            markWrongAnswer()
         }
        
     
@@ -90,10 +92,20 @@ async function optionHandler(id) {
 
 function crossSetter(ax,ay,id) {
     console.log(id)
-    const cross = document.querySelector(`#c-${id}`)
+    const cross = document.querySelectorAll(`.c-${id}`)
     console.log(cross)
-    cross.classList.remove("inactive")
-    cross.classList.add("active")
-    cross.style.top = `${ay + 20}px`
-    cross.style.left = `${ax - 20 }px`
+    cross.forEach(el => {
+        el.classList.remove("inactive")
+        el.classList.add("active")
+    })
+    
+
+}
+
+function markWrongAnswer() {
+    document.body.classList.add("wrong-answer");
+
+    setTimeout(() => {
+        document.body.classList.remove("wrong-answer"); // Remove effect after animation
+    }, 500);
 }

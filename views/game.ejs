@@ -10,9 +10,9 @@
             <p id="timer"></p>
             <div class="m-image">
 
-                    <img src="/images/1.jpg"/>
-                    <img src="/images/2.jpg"/>
-                    <img src="/images/3.jpg"/>
+                    <div class="img-cont"><img src="/images/1.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-1"/></div>
+                    <div class="img-cont"><img src="/images/2.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-2" /></div>
+                    <div class="img-cont"><img src="/images/3.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-3" /></div>
                     
                 </div>
         </div>
@@ -21,9 +21,9 @@
             <div id="container" style="height: 100vh; width: 100vw; margin-top: 60px;">
                 <img src="/bg.jpg" style="zoom: 0.7;" id="game-image"/>
                 <div id="image-popup" class="inactive">
-                    <button id="i-1" onclick="optionHandler(1)">1</button>
-                    <button id="i-2" onclick="optionHandler(2)">2</button>
-                    <button id="i-3" onclick="optionHandler(3)">3</button>
+                    <button id="i-1" class="img-cont" onclick="optionHandler(1)"><img src="/images/1.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-1"/></button>
+                    <button id="i-2" class="img-cont" onclick="optionHandler(2)"><img src="/images/2.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-2" /></button>
+                    <button id="i-3" class="img-cont" onclick="optionHandler(3)"><img src="/images/3.jpg" class="img"/><img src="/images/cross.jpg" class="cross inactive c-3" /></button>
                 </div>
                 <div id="t-div" class="inactive">
                     <div>1</div>

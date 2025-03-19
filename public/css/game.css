@@ -67,3 +67,38 @@
     z-index: 5;
 }
 
+.img-cont {
+    position: relative; /* Ensure the button is a reference point for absolute positioning */
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .img {
+    display: block; /* Ensures the image does not have extra spacing */
+    height: auto;
+  }
+  
+  .cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the cross image */
+    opacity: 1; /* Make sure it’s initially hidden if necessary */
+  }
+
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+.wrong-answer {
+    animation: shake 0.3s ease-in-out;
+   
+}

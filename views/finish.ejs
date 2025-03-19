@@ -1,8 +1,9 @@
 <html>
     <body>
-        <form>
-            name : 
-            time : 
+        <form action="/finish" method="post">
+            name : <input type="text" name="name" required/>
+            time : <%=time%>
+            <input type="submit" value="submit"/>
         </form>
     </body>
 </html>
