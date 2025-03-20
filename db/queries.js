@@ -1,19 +1,19 @@
 const pool = require("./pool");
 
 
-async function startGameID() {
-  const { rows }  = await pool.query("INSERT INTO users (name, time ) Values(NULL, NULL) RETURNING id")
+async function leaderboard() {
+  const { rows }  = await pool.query("select * from users")
   return rows;
 }
 
-async function finishGame(id, name, time){
-  const { rows } = await pool.query("UPDATE users SET name = $2, time = $3 where id = $1", [id, name, time]);
+async function finishGame( name, time){
+  const { rows } = await pool.query("INSERT INTO users (name, time ) Values ( $1, $2)", [name, time]);
   return rows;
 }
 
 
 module.exports = {
-   startGameID,
+   leaderboard,
    finishGame
 }
 

@@ -1,5 +1,9 @@
 <html>
     <body>
         <h1> Leaderboard </h1>
+        <% rows.forEach(el => { %>
+            <div> <%= el.name %> <%= el.time %> </div>
+        <% }) %>
+        
     </body>
 </html>

@@ -68,10 +68,14 @@ async function optionHandler(id) {
             if (data.cross === true) {
                 document.querySelector(`#i-${id}`).onclick = null
                 crossSetter(data.x,data.y,data.id)
+                if (data.redirect === true){
+                    setTimeout(() =>
+                        window.location.href = `/finish`
+                    , 1000)
+                    
+                }
             }
-            if (data.redirect === true){
-                window.location.href = `/finish`
-            }
+            
             
         }
         else{

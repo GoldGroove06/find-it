@@ -8,12 +8,11 @@ async function finishGet( req, res) {
 
 
 async function finishPost(req, res) {
-    const id = req.session.username
     const time = req.session.time
     const {name} = req.body
-    const rows = await db.finishGame(id, name, time)
+    const rows = await db.finishGame( name, time)
     if (rows) {
-         res.render("homepage")
+         res.redirect("leaderboard")
     }
     res.status(500)
 }

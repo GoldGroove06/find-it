@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const path = require("node:path");
 const { gameGet, gamePost } = require("./controllers/gameController");
 const { finishPost, finishGet } = require("./controllers/finishController");
+const { getLeaderboard } = require("./controllers/leaderboardContoller");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
@@ -26,6 +27,8 @@ app.get("/", (req, res) => {
 app.post("/api/q", gamePost);
 
 app.get("/game", gameGet);
+
+app.get("/leaderboard", getLeaderboard)
 
 
 const PORT = 8000
