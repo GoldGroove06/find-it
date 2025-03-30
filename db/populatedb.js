@@ -2,7 +2,7 @@ const { Client } = require("pg");
 require("dotenv").config();
 
 const SQL = `
-CREATE TABLE IF NOT EXISTS usernames (
+CREATE TABLE IF NOT EXISTS users (
   id INTEGER PRIMARY KEY NOT NULL,
   name VARCHAR ( 255 ),
   time INTEGER
