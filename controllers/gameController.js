@@ -1,4 +1,3 @@
-const { redirect } = require("react-router-dom");
 const db = require("../db/queries");
 
 let count = 0;
