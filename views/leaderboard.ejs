@@ -1,9 +1,26 @@
-<html>
-    <body>
-        <h1> Leaderboard </h1>
-        <% rows.forEach(el => { %>
-            <div> <%= el.name %> <%= el.time %> </div>
-        <% }) %>
-        
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet"  href="/css/leaderboard.css">
+</head>
+<body>
+    <div class="leaderboard">
+        <h1>Leaderboard</h1>
+        <div class="leaderboard-list">
+            <% rows.forEach((el, index) => { %>
+                <div class="leaderboard-item <%= index === 0 ? 'top-rank' : '' %>">
+                    <span class="rank"><%= index + 1 %>.</span>
+                    <span class="name"><%= el.name %></span>
+                    <span class="time"><%= el.time %></span>
+                </div>
+            <% }) %>
+        </div>
+        <div class="buttons">
+            <a href="/game" class="play-again">Play Again</a>
+            <a href="/" class="home">Home</a>
+        </div>
+    </div>
+</body>
 </html>

@@ -1,39 +1,40 @@
 #image-popup{
-    background-color: black;
+
     color: white;
-    width: 90px;
+    width: 58px;
     position: absolute;
-    height: 200px;
+    height: 185px;
     z-index: 1;    
 }
 
 #t-div{
     position: absolute;
-    background-color: black;
+    
     color: white;
-    width: 60px;
-    height: 60px;    
+    width: 45px;
+    height: 40px;    
 }
 
 #t-div div{
     border: solid;
     height: 58px;
-    border-color: aqua;
+    border-color: rgb(221, 207, 9);
     
 }
 
 .cross{
     position: absolute;
     border: solid;
-    width: 60px;
-    height: 60px; 
-    border-color: aqua;
+    width: 50px;
+    height: 50px; 
+    border-color: rgb(219, 11, 11);
 }
 
 #image-popup button {
     border: solid;
-    height: 61px;
-    border-color: aqua;
+    height: 58px;
+    border-color: rgb(221, 207, 9);
+
     
 }
 
@@ -45,9 +46,7 @@
     display: none;
 }
 
-#container{
 
-}
 
 .navbar{
     position: fixed;
@@ -58,6 +57,7 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .m-image{
@@ -72,6 +72,7 @@
     border: none;
     background: none;
     padding: 0;
+    margin-left: 2px;
     cursor: pointer;
   }
   

@@ -36,7 +36,7 @@ function divPlacer(e) {
     y = e.offsetY
     document.querySelector("#image-popup").className = "active"
     document.querySelector("#image-popup").style.top = `${e.offsetY + 20  }px`
-    document.querySelector("#image-popup").style.left = `${e.offsetX + 40 }px`
+    document.querySelector("#image-popup").style.left = `${e.offsetX + 25 }px`
     
 
     document.querySelector("#t-div").className = "active"
