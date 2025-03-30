@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const SQL = `
 CREATE TABLE IF NOT EXISTS users (
-  id INTEGER PRIMARY KEY NOT NULL,
+  id SERIAL PRIMARY KEY,
   name VARCHAR ( 255 ),
   time INTEGER
 );
